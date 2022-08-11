@@ -53,7 +53,7 @@ Please file a bug report including a short program that triggers the error.
 https://go.dev/issue/new
 ```
 
-### go1.18.2 (NOT confirmed)
+### go1.18.2 (NOT reproduced)
 
 #### Check go version
 
