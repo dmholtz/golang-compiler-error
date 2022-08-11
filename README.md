@@ -23,10 +23,31 @@ go version go1.19 linux/amd64
 
 #### Build the program
 
-```
+```bash
 david@w520:~/repos/gobug$ go build main.go
 # command-line-arguments
 ./main.go:38:13: internal compiler error: panic: runtime error: invalid memory address or nil pointer dereference
+
+Please file a bug report including a short program that triggers the error.
+https://go.dev/issue/new
+```
+
+### go1.18.5 (confirmed via GitHub Actions)
+
+#### Check go version
+
+```bash
+Run go version
+go version go1.18.5 linux/amd64
+```
+
+#### Build the program
+
+```bash
+Run go build -v main.go
+command-line-arguments
+# command-line-arguments
+Error: ./main.go:38:13: internal compiler error: panic: runtime error: invalid memory address or nil pointer dereference
 
 Please file a bug report including a short program that triggers the error.
 https://go.dev/issue/new
@@ -37,20 +58,18 @@ https://go.dev/issue/new
 #### Check go version
 
 ```bash
-david@w520:~/repos/gobug$ go version
-go version go1.19 linux/amd64
+david@MacBook golang-compiler-error % go version
+go version go1.18.2 darwin/arm64
 ```
 
 #### Build the program
 
+```bash
+david@MacBook golang-compiler-error % go build main.go
+david@MacBook golang-compiler-error %
 ```
-david@w520:~/repos/gobug$ go build main.go
-# command-line-arguments
-./main.go:38:13: internal compiler error: panic: runtime error: invalid memory address or nil pointer dereference
 
-Please file a bug report including a short program that triggers the error.
-https://go.dev/issue/new
-```
+No build errors have occured.
 
 ## Observations
 
